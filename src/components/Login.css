@@ -1,0 +1,23 @@
+.LoginPage, .SignupPage{
+    background-color: rgba(0,0,0,0.4);
+    background-image: url('../../public/mainbg.jpg');
+    background-blend-mode: color;
+    background-size: cover;
+    background-position: center;
+    --red: #B9090B;
+}
+
+.testBut{
+    background-color: #d80d11;
+}
+
+.testBut:hover{
+    background: var(--red) !important;
+    /* transform: rotate(34deg); */
+}
+
+.outlined{
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+    color: transparent;
+}
