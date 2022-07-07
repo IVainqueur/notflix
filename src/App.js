@@ -1,9 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Landing from "./components/Landing.jsx";
-import SignupPage from "./components/Signup";
-import LoginPage from "./components/Login.jsx";
-import Profiles from "./components/Profiles.jsx";
+import Landing from "./pages/Landing.jsx";
+import SignupPage from "./pages/Signup";
+import LoginPage from "./pages/Login.jsx";
+import Profiles from "./pages/Profiles.jsx";
 import AccessCheck from "./components/AccessCheck.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import Search from "./pages/Search.jsx";
+import Watch from "./pages/Watch.jsx";
 const App = () => {
     return (
         <>
@@ -13,7 +16,10 @@ const App = () => {
                     <Route path="/login" element={<LoginPage />}></Route>
                     <Route path="/signup" element={<SignupPage />}></Route>
                     <Route path="/profiles" element={<AccessCheck> <Profiles /></AccessCheck>}></Route>
-                    {/* <Route path="/loader" element={<Loader />}></Route> */}
+                    <Route path="/home" element={<HomePage />}></Route>
+                    <Route path="/search" element={<Search />}></Route>
+                    <Route path="/watch" element={<Watch />}></Route>
+                    <Route path="*" element={<div className="h-screen w-full grid place-content-center font-bold text-center text-white"><p className="text-[2rem]">404</p> <p>The Page You Are Looking For Is Not Available</p></div>}></Route>
                 </Routes>
             </BrowserRouter>}
         </>

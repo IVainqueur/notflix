@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -20,11 +22,86 @@ body {
 .loadSVG {
     animation: rotateIt 0.5s linear infinite;
 }
+
 @keyframes rotateIt {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
 }
+
+
+.custom-scroll::-webkit-scrollbar {
+    background: transparent;
+    height: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+    background: #ffffff10;
+    border-radius: 20px;
+
+}
+
+.VidContainer {
+    position: relative;
+}
+
+.VidContainer:before {
+    content: '';
+    background: orange;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: loading .5s infinite linear;
+}
+
+@keyframes loading {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* input[type=range]::-webkit-slider-thumb {
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    background: gold;
+    border-radius: 0px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: orange;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: green;
+    border-color: greeb;
+    border-width: 16px 0;
+    color: green;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: gray;
+}
+
+input[type=range] */
+
+
+/* input[type=range]::-webkit-slider */

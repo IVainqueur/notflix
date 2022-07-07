@@ -3,9 +3,7 @@ import { Button, Checkbox, FormControlLabel, IconButton, InputAdornment, TextFie
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import './Login.css'
-import axios from "axios"
 import { _axios } from "../_config"
-// import { Navigate } from "react-router-dom"
 import { BASE_URL } from "../_config"
 
 const CommonSx = {
