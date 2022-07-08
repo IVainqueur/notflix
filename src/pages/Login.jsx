@@ -1,6 +1,6 @@
 import { Error, Visibility, VisibilityOff } from "@mui/icons-material"
 import { Button, Checkbox, FormControlLabel, IconButton, InputAdornment, TextField } from "@mui/material"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import './Login.css'
 import { _axios } from "../_config"
@@ -21,7 +21,13 @@ const CommonSx = {
 
 const LoginPage = () => {
   /* Logout first */
-  _axios.get(`${BASE_URL}/user/logout`, {withCredentials: true})
+  useEffect(() => {
+    let controller = new AbortController();
+    _axios.get(`${BASE_URL}/user/logout`, { withCredentials: true, signal: controller.signal })
+    return () => {
+      controller.abort();
+    }
+  }, [])
 
   const navigator = useNavigate()
 
@@ -61,17 +67,29 @@ const LoginPage = () => {
       })
     }
     /* If the inputs are not empty, then */
-    _axios.post(`${BASE_URL}/user/login`, {
-      username: userInfo.username.value,
-      password: userInfo.password.value,
-    }, {
-      withCredentials: true,
+    // _axios.post(`${BASE_URL}/user/login`, {
+    //   username: userInfo.username.value,
+    //   password: userInfo.password.value,
+    // }, {
+    //   withCredentials: true,
+    //   headers: {
+    //     'Content-Type': "application/json"
+    //   }
+    // })
+    fetch(`${BASE_URL}/user/login`, {
+      body: JSON.stringify({
+        username: userInfo.username.value,
+        password: userInfo.password.value,
+      }),
+      // withCredentials: true,
       headers: {
         'Content-Type': "application/json"
-      }
-    })
-      .then((response) => {
-        let { data: res } = response
+      },
+      method: "POST",
+      credentials: "include"
+    }).then(res => res.json())
+      .then((res) => {
+        // let { data: res } = response
         if (res.code === "#Success") {
           console.log(res);
         } else {
