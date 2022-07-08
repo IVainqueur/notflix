@@ -1,8 +1,8 @@
 import axios from "axios"
 import Swal from "sweetalert2";
 
-// export const BASE_URL = "http://localhost:8080"
-export const BASE_URL = "http://iv-notflix.herokuapp.com"
+// export const BASE_URL = "https://localhost:8080"
+export const BASE_URL = "https://iv-notflix.herokuapp.com"
 
 /**
  * An instance of axios which has some default params that are going to be shared across all network requests

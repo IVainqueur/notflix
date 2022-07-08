@@ -1,2 +1,2 @@
 # NotFlix
-The Free And Limited(in some sense) Alternative for NetFlix. Bringing the best of [IMDb](https://imdb.com), [Goojara](http://goojara.to), And [NetFlix](https://netflix.com) all in one package
+The Free And Limited(in some sense) Alternative for NetFlix. Bringing the best of [IMDb](https://imdb.com), [Goojara](https://goojara.to), And [NetFlix](https://netflix.com) all in one package
