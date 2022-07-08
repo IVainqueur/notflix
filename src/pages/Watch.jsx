@@ -42,10 +42,10 @@ const Watch = () => {
             case 'play':
                 if (video.paused) {
                     video.play()
-                    setIsPlaying(true)
+                    // setIsPlaying(true)
                 } else {
                     video.pause()
-                    setIsPlaying(false)
+                    // setIsPlaying(false)
                 }
                 break;
             case 'forward':
@@ -86,7 +86,11 @@ const Watch = () => {
                                 isLoading={isLoading}
                                 onClick={() => console.log("Clicked the overlay")}
                             />
-                            <video autoPlay controls={false} className={styles.video} onLoadedMetadata={(e) => {
+                            <video autoPlay controls={false} className={styles.video} onPlay={()=>{
+                                setIsPlaying(true)
+                            }} onPause={()=>{
+                                setIsPlaying(false)
+                            }} onLoadedMetadata={(e) => {
                                 // setTimeout(() => document.querySelector('#Play').click(), 100);
                                 listenForLoad();
                             }}>
