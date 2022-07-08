@@ -26,7 +26,7 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, m
                         ?
                         <LoadSVG size={"80px"} />
                         :
-                        (isPlaying ? <PlayArrowRounded sx={{ fill: "white", cursor: "pointer" }} /> : <PauseRounded sx={{ fill: "white", cursor: "pointer" }} />)}
+                        (!isPlaying ? <PlayArrowRounded sx={{ fill: "white", cursor: "pointer" }} /> : <PauseRounded sx={{ fill: "white", cursor: "pointer" }} />)}
                 </div>
                 <div
                     id="Forward"

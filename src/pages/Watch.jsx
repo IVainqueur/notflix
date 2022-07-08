@@ -4,20 +4,20 @@ import { useLocation } from 'react-router-dom';
 import { _axios } from '../_config';
 import MediaButtonsOverlay from '../components/MediaButtonsOverlay';
 
-let styles = {
-    mediaButtonContainer: `cursor-pointer p-2 rounded-full flex items-center justify-center hover:bg-slate-700 backdrop-blur`,
-    mediaButtonsContainer: `absolute top-[50%] left-[50%] flex flex-row gap-3 items-center`,
-    video: `w-full h-auto max-h-[45rem] bg-slate-700`,
-    mediaButtonsOverlay: `absolute w-full h-full top-0 left-0 bg-[#00000050] hover:opacity-100 z-[2]`,
-    VidContainer: `VidContainer w-full m-auto relative`
-}
 let currentState;
 const Watch = () => {
-    const useQuery = () => new URLSearchParams(useLocation().search);
-    let query = useQuery();
     let [isPlaying, setIsPlaying] = useState(false)
     let [isLoading, setIsLoading] = useState(true)
     let [movieInfo, setMovieInfo] = useState({})
+    const styles = {
+        mediaButtonContainer: `cursor-pointer p-2 rounded-full flex items-center justify-center ${!isLoading ? 'hover:bg-slate-700 backdrop-blur' : ''}`,
+        mediaButtonsContainer: `absolute top-[50%] left-[50%] flex flex-row gap-3 items-center`,
+        video: `w-full h-auto max-h-[45rem] bg-slate-700`,
+        mediaButtonsOverlay: `absolute w-full h-full top-0 left-0 bg-[#00000050] hover:opacity-100 z-[2]`,
+        VidContainer: `VidContainer w-full m-auto relative`
+    }
+    const useQuery = () => new URLSearchParams(useLocation().search);
+    let query = useQuery();
     let link = query.get('link');
     useEffect(() => {
         let controller = new AbortController();
