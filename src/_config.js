@@ -1,7 +1,7 @@
 import axios from "axios"
 import Swal from "sweetalert2";
 
-// export const BASE_URL = "http://localhost:8080"
+// export const BASE_URL = "http://192.168.4.14:8080"
 export const BASE_URL = "https://iv-notflix.herokuapp.com"
 
 /**
@@ -20,7 +20,8 @@ const ErrorToast = Swal.mixin({
     // timerProgressBar: true,
     icon: "error",
     color: "#FFF",
-    background: `#B9090B20`,
+    background: `#5e2426`,
+    showCloseButton: true
 });
 
 _axios.interceptors.response.use((response)=>{
