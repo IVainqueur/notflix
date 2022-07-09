@@ -8,10 +8,10 @@ import { BASE_URL } from "../_config"
 
 const CommonSx = {
   '& .MuiInputLabel-root': {
-    color: "#ffffffB0 !important"
+    color: "#b7b3b2 !important"
   },
   '& .MuiInputLabel-root.Mui-focused': {
-    color: "#ffffffB0"
+    color: "#b7b3b2"
   },
   '& .css-16jznpq-MuiInputBase-root-MuiFilledInput-root:after': {
     borderBottomColor: "#ffffff90"
@@ -117,7 +117,7 @@ const LoginPage = () => {
         }} variant="solid" href="/signup">Sign Up</Button>
       </nav>
       <div className="main grid place-items-center h-full w-full px-4">
-        <div className="form w-full md:min-w-fit md:w-[30rem] bg-[#00000090] text-white py-5 px-10 flex flex-col gap-2 rounded">
+        <form autoComplete="off" className="form w-full md:min-w-fit md:w-[30rem] bg-[#00000090] text-white py-5 px-10 flex flex-col gap-2 rounded">
           <h1 className="text-[2em] font-bold">Login</h1>
           {userInfo.formError && <p className="text-[#fff] p-3 bg-[#6b1a1a] flex flex-row items-center gap-2">
             <Error />
@@ -147,7 +147,7 @@ const LoginPage = () => {
               sx: {
                 color: "white"
               },
-              endAdornment: <InputAdornment position="end"><IconButton onClick={passwordVisibilityHandler}>{userInfo.showPassword ? <Visibility className="cursor-pointer" sx={{ fill: "#ffffffb0" }} /> : <VisibilityOff className="cursor-pointer" sx={{ fill: "#ffffffb0" }} />}</IconButton></InputAdornment>
+              endAdornment: <InputAdornment position="end"><IconButton onClick={passwordVisibilityHandler}>{userInfo.showPassword ? <Visibility className="cursor-pointer" sx={{ fill: "#b7b3b2" }} /> : <VisibilityOff className="cursor-pointer" sx={{ fill: "#b7b3b2" }} />}</IconButton></InputAdornment>
             }}
             variant="filled"
             required={true}
@@ -162,7 +162,7 @@ const LoginPage = () => {
           <FormControlLabel label="Remember Me" control={
             <Checkbox sx={{
               width: "fit-content",
-              color: "#ffffffb0",
+              color: "#b7b3b2",
               '&.Mui-checked': {
                 color: "white"
               }
@@ -171,7 +171,7 @@ const LoginPage = () => {
             background: 'red',
             color: "white",
           }} onClick={submitHandler}>Login</Button>
-        </div>
+        </form>
       </div>
     </div>
   )

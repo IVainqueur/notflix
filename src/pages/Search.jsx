@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { _axios } from "../_config";
 import NavBar from "../components/NavBar";
 import { LiveTv, Movie } from "@mui/icons-material";
+import LoadSVG from "../components/LoadSVG";
 
 const Search = () => {
     const navigator = useNavigate();
@@ -11,7 +12,7 @@ const Search = () => {
     let searchVal = useMemo(() => query.get('q'), [query])
     let [results, setResults] = useState([])
     useEffect(() => {
-        // setResults([])
+        setResults([])
         let controller = new AbortController()
         _axios.get(`/find/${searchVal ? searchVal : ''}/false`, { signal: controller.signal })
             .then(response => {
@@ -41,7 +42,7 @@ const Search = () => {
                     <p className="text-3xl mb-4">{results.length} results for `{searchVal}`</p>
                     {results.length === 0
                         ?
-                        <p className="">Loading...</p>
+                        <p className=""><LoadSVG size={'120px'}/></p>
                         :
                         results.map((x, i) => {
                             return (
