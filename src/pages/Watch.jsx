@@ -61,7 +61,7 @@ const Watch = () => {
     const listenForLoad = () => {
         let video = document.querySelector('.VidContainer video')
         currentState = video.readyState
-        let intervalHandler = setInterval(() => {
+        setInterval(() => {
             if (video.readyState !== currentState) {
                 console.log(`currentState changed from ${currentState} to ${video.readyState}`)
                 currentState = video.readyState
