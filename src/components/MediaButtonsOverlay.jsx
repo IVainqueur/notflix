@@ -1,12 +1,10 @@
 import { FastForwardRounded, FastRewindRounded, PauseRounded, PlayArrowRounded } from '@mui/icons-material';
-import { useState } from 'react';
 import LoadSVG from './LoadSVG';
 
-const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, maxTime }) => {
-    const [time, setTime] = useState(0);
-    const onSeekHandler = ({ target }) => {
-        setTime(Number(target.value))
-    }
+const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _time }) => {
+    // const onSeekHandler = ({ target }) => {
+    //     setTime(Number(target.value))
+    // }
     return (
         <div className={`${styles.mediaButtonsOverlay}  ${isLoading ? 'opacity-100' : 'opacity-0'}`}>
             <div className={styles.mediaButtonsContainer} style={{ transform: "translate(-50%,-50%)" }}>
@@ -38,7 +36,7 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, m
 
             </div>
             <div className='absolute bottom-0 left-0 w-full'>
-                <input type='range' className={'w-full block cursor-pointer'} value={time} min={0} max={100} onChange={onSeekHandler} />
+                <progress min={0} value={Math.round(_time.current)} max={Math.round(_time.max)} color={'red'} className="w-full" onClick={(e)=> console.log(e)}></progress>
             </div>
         </div>
     )
