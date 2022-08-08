@@ -67,7 +67,9 @@ const Serie = () => {
                                                         <Link key={eIndex} data-id={episode.episodeURL} to={`/watch?link=${episode.episodeURL.match(/goojara\.to\/(\w+)/)[1]}&service=goojara`} className="px-2 pt-4 pb-9 cursor-pointer border-l-2 border-l-transparent border-b-[1px] border-b-[#1b1b1b] hover:bg-[#1b1b1b]  hover:border-l-red-400">
                                                             {/* <img src={episode.posterURL} alt="" /> */}
                                                             <h2 className='font-bold text-lg'>
-                                                                <span className='text-lg font-bold text-red-400 mr-3'>{episode.episodeNumber} </span>
+                                                                <span className='text-lg font-bold text-red-400 mr-3'>
+                                                                    {episode.episodeNumber}
+                                                                </span>
                                                                 {episode.episodeTitle}
                                                             </h2>
                                                             <p>{episode.episodeDescription}</p>
