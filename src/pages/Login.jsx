@@ -95,7 +95,7 @@ const LoginPage = () => {
         } else {
           return setUserInfo({ ...userInfo, formError: res.message ? res.message : "Something went wrong. Please try again" })
         }
-        navigator('/profiles');
+        navigator('/home');
 
       })
       .catch((e) => {
