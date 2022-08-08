@@ -22,16 +22,16 @@ const ErrorToast = Swal.mixin({
     showCloseButton: true
 });
 
-_axios.interceptors.response.use((response)=>{
-    let {data: res} = response;
-    if(["#InvalidToken", "#NoTokenNoEntry"].includes(res.code)){
-       window.location.pathname = "/login";
-       
-    }else if(res.code === "#Error"){
+_axios.interceptors.response.use((response) => {
+    let { data: res } = response;
+    if (["#InvalidToken", "#NoTokenNoEntry"].includes(res.code)) {
+        window.location.pathname = "/login";
+
+    } else if (res.code === "#Error") {
         ErrorToast.fire(res.message)
     }
     return response
 })
 
-export {_axios}
+export { _axios }
 
