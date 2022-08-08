@@ -1,8 +1,6 @@
 import { Search } from "@mui/icons-material"
 import { InputAdornment, OutlinedInput } from "@mui/material"
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"
-import { _axios } from "../_config";
 
 const SearchBar = ({searchQuery}) => {
     const navigator = useNavigate();
