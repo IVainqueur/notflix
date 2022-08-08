@@ -15,7 +15,7 @@ const Landing = () => {
           padding: "7px 17px",
           fontSize: "1rem",
           borderRadiues: "2px"
-        }} variant="solid" onClick={()=> navigator('/signup')}>Sign In</Button>
+        }} variant="solid" onClick={() => navigator('/signup')}>Sign In</Button>
       </nav>
       <div className="main h-full pt-20 grid place-content-center">
         <div className="First mx-auto -mt-40 w-fit text-white text-center">
@@ -30,7 +30,7 @@ const Landing = () => {
             fontSize: "1rem",
             marginTop: "10px",
             borderRadius: "2px"
-          }} onClick={()=> navigator('/login')}>GET IN</Button>
+          }} onClick={() => navigator('/login')}>GET IN</Button>
         </div>
       </div>
     </div>

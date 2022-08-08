@@ -23,7 +23,7 @@ const Profiles = () => {
                             <span className="text-lg font-bold">{x.name}</span>
                         </div>)
                     }
-                    <div className="AddProfile bg-slate-700 h-20 w-20 rounded-full grid place-content-center cursor-pointer hover:h-24 hover:w-24"><Add sx={{fill: "white"}}/></div>
+                    <div className="AddProfile bg-slate-700 h-20 w-20 rounded-full grid place-content-center cursor-pointer hover:h-24 hover:w-24"><Add sx={{ fill: "white" }} /></div>
                 </div>
             </div>
         </div>

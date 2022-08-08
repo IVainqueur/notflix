@@ -9,7 +9,7 @@ const Watch = () => {
     let [isPlaying, setIsPlaying] = useState(false)
     let [isLoading, setIsLoading] = useState(true)
     let [movieInfo, setMovieInfo] = useState({})
-    let [time, setTime] = useState({current: 0, max: 0})
+    let [time, setTime] = useState({ current: 0, max: 0 })
     const styles = {
         mediaButtonContainer: `cursor-pointer p-2 rounded-full flex items-center justify-center ${!isLoading ? 'hover:bg-slate-700 backdrop-blur' : ''}`,
         mediaButtonsContainer: `absolute top-[50%] left-[50%] flex flex-row gap-3 items-center`,
@@ -42,10 +42,10 @@ const Watch = () => {
             case 'play':
                 if (video.paused) {
                     video.play()
-                    
+
                 } else {
                     video.pause()
-                    
+
                 }
                 break;
             case 'forward':
@@ -87,21 +87,21 @@ const Watch = () => {
                                 onClick={() => console.log("Clicked the overlay")}
                                 _time={time}
                             />
-                            <video autoPlay controls={false} className={styles.video} onPlay={()=>{
+                            <video autoPlay controls={false} className={styles.video} onPlay={() => {
                                 setIsPlaying(true)
-                            }} 
-                            onPause={()=>{
-                                setIsPlaying(false)
-                            }} 
-                            onLoadedMetadata={(e) => {
-                                listenForLoad();
                             }}
-                            onCanPlay={(e)=>{
-                                setTime({...time, max: e.target.duration})
-                            }}
-                            onTimeUpdate={(e)=>{
-                                setTime({...time, current: e.target.currentTime})
-                            }}
+                                onPause={() => {
+                                    setIsPlaying(false)
+                                }}
+                                onLoadedMetadata={(e) => {
+                                    listenForLoad();
+                                }}
+                                onCanPlay={(e) => {
+                                    setTime({ ...time, max: e.target.duration })
+                                }}
+                                onTimeUpdate={(e) => {
+                                    setTime({ ...time, current: e.target.currentTime })
+                                }}
                             >
                                 <source src={movieInfo.videoURL} />
                             </video>
