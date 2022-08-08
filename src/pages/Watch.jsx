@@ -22,7 +22,6 @@ const Watch = () => {
     let link = query.get('link');
     useEffect(() => {
         let controller = new AbortController();
-        // let service = query.get('service');
         _axios.get(`/watch/goojara/${link}`)
             .then(response => {
                 let { data: res } = response;
@@ -43,10 +42,10 @@ const Watch = () => {
             case 'play':
                 if (video.paused) {
                     video.play()
-                    // setIsPlaying(true)
+                    // (true)
                 } else {
                     video.pause()
-                    // setIsPlaying(false)
+                    // (false)
                 }
                 break;
             case 'forward':
