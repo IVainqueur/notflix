@@ -67,15 +67,7 @@ const LoginPage = () => {
       })
     }
     /* If the inputs are not empty, then */
-    // _axios.post(`${BASE_URL}/user/login`, {
-    //   username: userInfo.username.value,
-    //   password: userInfo.password.value,
-    // }, {
-    //   withCredentials: true,
-    //   headers: {
-    //     'Content-Type': "application/json"
-    //   }
-    // })
+
     fetch(`${BASE_URL}/user/login`, {
       body: JSON.stringify({
         username: userInfo.username.value,
@@ -88,7 +80,6 @@ const LoginPage = () => {
       credentials: "include"
     }).then(res => res.json())
       .then((res) => {
-        // let { data: res } = response
         if (res.code === "#Success") {
           console.log(res);
         } else {
