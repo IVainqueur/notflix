@@ -5,7 +5,6 @@ import NavBar from '../components/NavBar'
 import { _axios } from '../_config'
 
 const Serie = () => {
-    // const styles = {}
     let useQuery = () => new URLSearchParams(useLocation().search);
     let queries = useQuery();
     let [serieInfo, setSerieInfo] = useState({})
