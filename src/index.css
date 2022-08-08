@@ -75,13 +75,13 @@ progress {
     cursor: pointer;
 }
 progress::-webkit-progress-bar {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     /* border: 1px solid green;     */
 }
 progress::-webkit-progress-value {
     background: #b9090b;
 }
 progress::-moz-progress-bar {
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     /* border: 1px solid green;   */
 }
