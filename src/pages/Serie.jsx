@@ -21,7 +21,7 @@ const Serie = () => {
                     setSerieInfo(res.data)
                 }
             })
-    }, [])
+    }, [queries])
     return (
         <div className='min-h-fit h-screen'>
             <NavBar active={'Series'} />
