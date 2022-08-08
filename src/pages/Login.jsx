@@ -81,7 +81,6 @@ const LoginPage = () => {
         username: userInfo.username.value,
         password: userInfo.password.value,
       }),
-      // withCredentials: true,
       headers: {
         'Content-Type': "application/json"
       },
