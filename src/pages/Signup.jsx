@@ -201,13 +201,18 @@ const SignupPage = () => {
             }}
           />
 
-          <Button 
-          className='testBut' 
-          sx={{
-            background: 'red',
-            color: "white",
-          }} 
-          onClick={submitHandler}>Login</Button>
+          <Button
+
+            className='testBut'
+
+            sx={{
+              background: 'red',
+              color: "white",
+            }}
+
+            onClick={submitHandler}
+          >
+            Login</Button>
         </div>
       </div>
     </div>
