@@ -46,7 +46,12 @@ const Serie = () => {
                             <div className="seasonsSelector flex flex-row items-center gap-1">
                                 {serieInfo.seasons.map((x, i) => {
                                     return (
-                                        <div key={i} onClick={() => setVisibleSeason(i)} className={`${visibleSeason === i ? 'bold bg-slate-600' : 'bg-slate-900'} rounded-t px-2 py-1 cursor-pointer`}>Season {x.season}</div>
+                                        <div
+                                            key={i}
+                                            onClick={() => setVisibleSeason(i)} className={`${visibleSeason === i ? 'bold bg-slate-600' : 'bg-slate-900'} rounded-t px-2 py-1 cursor-pointer`
+                                            }
+                                        >
+                                            Season {x.season}</div>
                                     )
                                 })}
                             </div>
