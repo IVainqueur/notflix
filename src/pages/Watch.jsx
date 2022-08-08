@@ -100,7 +100,6 @@ const Watch = () => {
                                 setTime({...time, max: e.target.duration})
                             }}
                             onTimeUpdate={(e)=>{
-                                // console.log(e.target.currentTime)
                                 setTime({...time, current: e.target.currentTime})
                             }}
                             >
