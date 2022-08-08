@@ -63,8 +63,8 @@ const HomePage = () => {
                 <div className="TodayFavorites flex flex-row gap-2  w-full overflow-y-auto overflow-x-scroll px-7 custom-scroll pb-1">
                     <>
                         {(favs.length === 0)
-                            ? 
-                            <p>Loading ...</p> 
+                            ?
+                            <p>Loading ...</p>
                             :
                             <>
                                 <ChevronLeft sx={{ ...chevronStyle, left: "0.625rem" }} />
