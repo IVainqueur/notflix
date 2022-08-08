@@ -1,8 +1,7 @@
 import { Search } from "@mui/icons-material"
 import { InputAdornment, OutlinedInput } from "@mui/material"
-import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom"
-import { _axios } from "../_config";
+import { useState } from "react"
 
 const SearchBar = ({searchQuery}) => {
     const navigator = useNavigate();
@@ -26,10 +25,8 @@ const SearchBar = ({searchQuery}) => {
             border: "2px solid transparent",
             padding: "2px 10px",
             '&.Mui-focused': {
-                // borderRight: "2px dotted #B9090B",
                 borderLeft: "2px dashed #B9090B",
                 backgroundColor: "#B9090B20"
-                // borderTop: "2px dotted #B9090B"
             },
             '& .MuiOutlinedInput-notchedOutline': {
                 borderWidth: "0 !important",

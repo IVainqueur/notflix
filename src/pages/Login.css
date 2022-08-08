@@ -13,7 +13,6 @@
 
 .testBut:hover{
     background: var(--red) !important;
-    /* transform: rotate(34deg); */
 }
 
 .outlined{
