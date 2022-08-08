@@ -51,7 +51,8 @@ const Serie = () => {
                                             onClick={() => setVisibleSeason(i)} className={`${visibleSeason === i ? 'bold bg-slate-600' : 'bg-slate-900'} rounded-t px-2 py-1 cursor-pointer`
                                             }
                                         >
-                                            Season {x.season}</div>
+                                            Season {x.season}
+                                        </div>
                                     )
                                 })}
                             </div>
