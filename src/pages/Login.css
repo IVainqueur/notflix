@@ -1,21 +1,22 @@
-.LoginPage, .SignupPage{
-    background-color: rgba(0,0,0,0.4);
-    background-image: url('../../public/mainbg.jpg');
+.LoginPage,
+.SignupPage {
+    background-color: rgba(0, 0, 0, 0.4);
+    background-image: url("../../public/mainbg.jpg");
     background-blend-mode: color;
     background-size: cover;
     background-position: center;
-    --red: #B9090B;
+    --red: #b9090b;
 }
 
-.testBut{
+.testBut {
     background-color: #d80d11;
 }
 
-.testBut:hover{
+.testBut:hover {
     background: var(--red) !important;
 }
 
-.outlined{
+.outlined {
     -webkit-text-stroke-color: white;
     -webkit-text-stroke-width: 1px;
     color: transparent;
