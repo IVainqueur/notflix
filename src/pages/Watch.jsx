@@ -42,10 +42,10 @@ const Watch = () => {
             case 'play':
                 if (video.paused) {
                     video.play()
-                    // (true)
+                    
                 } else {
                     video.pause()
-                    // (false)
+                    
                 }
                 break;
             case 'forward':
@@ -94,7 +94,6 @@ const Watch = () => {
                                 setIsPlaying(false)
                             }} 
                             onLoadedMetadata={(e) => {
-                                // setTimeout(() => document.querySelector('#Play').click(), 100);
                                 listenForLoad();
                             }}
                             onCanPlay={(e)=>{
