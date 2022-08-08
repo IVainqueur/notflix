@@ -8,7 +8,7 @@ import './Login.css'
 
 const SignupPage = () => {
   const navigator = useNavigate()
-  
+
   const [userInfo, setUserInfo] = useState({
     fullName: {
       value: '',
