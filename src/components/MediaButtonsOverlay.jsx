@@ -1,7 +1,7 @@
 import { FastForwardRounded, FastRewindRounded, PauseRounded, PlayArrowRounded } from '@mui/icons-material';
 import LoadSVG from './LoadSVG';
 
-const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _time, setTime }) => {
+const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _time, setTime, videoRef }) => {
     // const onSeekHandler = ({ target }) => {
     //     setTime(Number(target.value))
     // }
@@ -44,6 +44,7 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
                     className="w-full"
                     onClick={(e) =>{
                         let percentage = ((e.clientX - e.target.getBoundingClientRect().x)/e.target.getBoundingClientRect().width * 100)
+                        videoRef?.current?.
                         // setTime(prev => {
                         //     return {...prev, current}
                         // })

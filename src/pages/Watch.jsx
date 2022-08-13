@@ -88,7 +88,7 @@ const Watch = () => {
                                 onClick={() => console.log("Clicked the overlay")}
                                 _time={time}
                                 setTime={setTime}
-                                videoRef
+                                videoRef={videoRef}
                             />
                             <video
                                 ref={videoRef}
