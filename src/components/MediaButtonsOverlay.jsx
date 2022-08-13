@@ -45,6 +45,7 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
                     onClick={(e) =>{
                         let percentage = ((e.clientX - e.target.getBoundingClientRect().x)/e.target.getBoundingClientRect().width);
                         videoRef.current.currentTime = _time.max * percentage
+                        e.target.value = _time.max * percentage
                         // setTime(prev => {
                         //     return {...prev, current}
                         // })
