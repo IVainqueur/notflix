@@ -86,6 +86,7 @@ const Watch = () => {
                                 isLoading={isLoading}
                                 onClick={() => console.log("Clicked the overlay")}
                                 _time={time}
+                                setTime={setTime}
                             />
                             <video autoPlay controls={false} className={styles.video} onPlay={() => {
                                 setIsPlaying(true)
