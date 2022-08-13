@@ -66,7 +66,7 @@ const Watch = () => {
             if (video.readyState !== currentState) {
                 console.log(`currentState changed from ${currentState} to ${video.readyState}`)
                 currentState = video.readyState
-                setIsLoading(video.readyState !== 4)
+                setIsLoading([3, 4].includes(video.readyState))
             }
         }, 500)
     }
