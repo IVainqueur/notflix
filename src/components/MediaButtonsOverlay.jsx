@@ -42,7 +42,7 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
                         let _hr = parseInt(curTime / 3600)
                         let _min = parseInt((curTime - (_hr * 3600)) / 60)
                         let _sec = curTime - (_hr * 3600 + _min * 60)
-                        return `${_hr}:${_min}:${_sec}`
+                        return `${_hr.padEnd(2, '0')}:${_min.padEnd(2, '0')}:${_sec.padEnd(2, '0')}`
                     })()
                 }</span>
                 <progress
@@ -67,7 +67,7 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
                         let _hr = parseInt(maxTime / 3600)
                         let _min = parseInt((maxTime - (_hr * 3600)) / 60)
                         let _sec = maxTime - (_hr * 3600 + _min * 60)
-                        return `${_hr}:${_min}:${_sec}`
+                        return `${_hr.padEnd(2, '0')}:${_min.padEnd(2, '0')}:${_sec.padEnd(2, '0')}`
                     })()
                 }</span>
             </div>
