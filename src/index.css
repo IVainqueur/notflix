@@ -71,7 +71,7 @@ body {
 }
 
 .swal2-container{
-    height: fit-content;
+    height: fit-content !important;
 }
 
 progress {
