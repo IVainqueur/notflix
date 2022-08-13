@@ -39,11 +39,9 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
                 <span className='absolute bottom-[100%] text-white left-1'>{
                     (() => {
                         let curTime = _time.current
-                        let maxTime = _time.max
                         let _hr = parseInt(curTime / 3600)
                         let _min = parseInt((curTime - (_hr * 3600)) / 60)
                         let _sec = curTime - (_hr * 3600 + _min * 60)
-                        // let toShow = _time
                         return `${_hr}:${_min}:${_sec}`
                     })()
                 }</span>
@@ -65,12 +63,10 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
                 ></progress>
                 <span className='absolute bottom-[100%] text-white right-1'>{
                     (() => {
-                        let curTime = _time.current
                         let maxTime = _time.max
-                        let _hr = parseInt(curTime / 3600)
-                        let _min = parseInt((curTime - (_hr * 3600)) / 60)
-                        let _sec = curTime - (_hr * 3600 + _min * 60)
-                        // let toShow = _time
+                        let _hr = parseInt(maxTime / 3600)
+                        let _min = parseInt((maxTime - (_hr * 3600)) / 60)
+                        let _sec = maxTime - (_hr * 3600 + _min * 60)
                         return `${_hr}:${_min}:${_sec}`
                     })()
                 }</span>
