@@ -40,6 +40,7 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
                     (() => {
                         let curTime = _time.current
                         let maxTime = _time.max
+                        let _sec = curTime % 60
                         let toShow = _time
                         return '00:00:00'
                     })()
