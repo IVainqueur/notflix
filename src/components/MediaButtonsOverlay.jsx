@@ -44,9 +44,9 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
                     className="w-full"
                     onClick={(e) =>{
                         let percentage = ((e.clientX - e.target.getBoundingClientRect().x)/e.target.getBoundingClientRect().width * 100)
-                        setTime(prev => {
-                            return {...prev, current}
-                        })
+                        // setTime(prev => {
+                        //     return {...prev, current}
+                        // })
                         console.log(((e.clientX - e.target.getBoundingClientRect().x)/e.target.getBoundingClientRect().width * 100) ,e)
                     }}
                 ></progress>

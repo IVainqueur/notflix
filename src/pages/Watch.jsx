@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import NavBar from '../components/NavBar'
 import { useLocation } from 'react-router-dom';
 import { _axios } from '../_config';
@@ -10,6 +10,7 @@ const Watch = () => {
     let [isLoading, setIsLoading] = useState(true)
     let [movieInfo, setMovieInfo] = useState({})
     let [time, setTime] = useState({ current: 0, max: 0 })
+    let videoRef = useRef()
     const styles = {
         mediaButtonContainer: `cursor-pointer p-2 rounded-full flex items-center justify-center ${!isLoading ? 'hover:bg-slate-700 backdrop-blur' : ''}`,
         mediaButtonsContainer: `absolute top-[50%] left-[50%] flex flex-row gap-3 items-center`,
@@ -87,10 +88,16 @@ const Watch = () => {
                                 onClick={() => console.log("Clicked the overlay")}
                                 _time={time}
                                 setTime={setTime}
+                                videoRef
                             />
-                            <video autoPlay controls={false} className={styles.video} onPlay={() => {
-                                setIsPlaying(true)
-                            }}
+                            <video
+                                ref={videoRef}
+                                autoPlay
+                                controls={false}
+                                className={styles.video}
+                                onPlay={() => {
+                                    setIsPlaying(true)
+                                }}
                                 onPause={() => {
                                     setIsPlaying(false)
                                 }}
