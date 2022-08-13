@@ -44,7 +44,7 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
                         let _min = parseInt((curTime - (_hr * 3600)) / 60)
                         let _sec = curTime - (_hr * 3600 + _min * 60)
                         let toShow = _time
-                        return '00:00:00'
+                        return `${_hr}:${_min}:${_sec}`
                     })()
                 }</span>
                 <progress
