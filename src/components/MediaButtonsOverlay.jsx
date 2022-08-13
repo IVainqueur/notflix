@@ -36,8 +36,11 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
 
             </div>
             <div className='absolute bottom-0 left-0 w-full'>
-                <span className='absolute -top-1 text-white'>{
+                <span className='absolute -top-1 text-white left-0'>{
                     (() => {
+                        let curTime = _time.current
+                        let maxTime = _time.max
+                        let toShow = _time
                         return '00:00'
                     })()
                 }</span>
@@ -57,8 +60,11 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
                         console.log(percentage, _time.max * percentage)
                     }}
                 ></progress>
-                <span className='absolute -top-1 text-white'>{
+                <span className='absolute -top-1 text-white right-0'>{
                     (() => {
+                        let curTime = _time.current
+                        let maxTime = _time.max
+                        let toShow = _time
                         return '00:00'
                     })()
                 }</span>
