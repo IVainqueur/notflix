@@ -36,7 +36,11 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
 
             </div>
             <div className='absolute bottom-0 left-0 w-full'>
-                <span className='absolute -top-1 text-white'></span>
+                <span className='absolute -top-1 text-white'>{
+                    () => {
+                        return '00:00'
+                    }
+                }</span>
                 <progress
                     min={0}
                     value={Math.round(_time.current)}
@@ -53,7 +57,11 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
                         console.log(percentage, _time.max * percentage)
                     }}
                 ></progress>
-                <span className='absolute -top-1 text-white'></span>
+                <span className='absolute -top-1 text-white'>{
+                    () => {
+                        return '00:00'
+                    }
+                }</span>
             </div>
         </div>
     )
