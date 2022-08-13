@@ -41,7 +41,7 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
                         let curTime = _time.current
                         let maxTime = _time.max
                         let toShow = _time
-                        return '00:00'
+                        return '00:00:00'
                     })()
                 }</span>
                 <progress
@@ -65,7 +65,7 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
                         let curTime = _time.current
                         let maxTime = _time.max
                         let toShow = _time
-                        return '00:00'
+                        return '00:00:00'
                     })()
                 }</span>
             </div>
