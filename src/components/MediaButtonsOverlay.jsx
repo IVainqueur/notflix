@@ -37,9 +37,9 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
             </div>
             <div className='absolute bottom-0 left-0 w-full'>
                 <span className='absolute -top-1 text-white'>{
-                    () => {
+                    (() => {
                         return '00:00'
-                    }
+                    })()
                 }</span>
                 <progress
                     min={0}
@@ -58,9 +58,9 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
                     }}
                 ></progress>
                 <span className='absolute -top-1 text-white'>{
-                    () => {
+                    (() => {
                         return '00:00'
-                    }
+                    })()
                 }</span>
             </div>
         </div>
