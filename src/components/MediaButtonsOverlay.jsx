@@ -42,7 +42,7 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
                     max={Math.round(_time.max)}
                     color={'red'}
                     className="w-full"
-                    onClick={(e) => console.log(e.clientX, e)}
+                    onClick={(e) => console.log(e.clientX, e.target.getBoundingClientRect(),e)}
                 ></progress>
             </div>
         </div>
