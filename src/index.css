@@ -70,6 +70,10 @@ body {
     }
 }
 
+.swal2-container{
+    height: fit-content !important;
+}
+
 progress {
     --color: orange;
     cursor: pointer;
