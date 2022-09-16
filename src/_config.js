@@ -2,7 +2,8 @@ import axios from "axios"
 import Swal from "sweetalert2";
 
 // export const BASE_URL = "http://0.0.0.0:8080"
-export const BASE_URL = "https://iv-notflix.herokuapp.com"
+//export const BASE_URL = "https://iv-notflix.herokuapp.com"
+export const BASE_URL = "https://web-production-5248.up.railway.app"
 
 /**
  * An instance of axios which has some default params that are going to be shared across all network requests
