@@ -35,7 +35,7 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
                 </div>
 
             </div>
-            <div className='absolute bottom-0 left-0 w-full'>
+            <div className='absolute bottom-0 left-0 w-full h-[17px]'>
                 <span className='absolute bottom-[100%] text-white left-1'>{
                     (() => {
                         let curTime = _time.current
@@ -50,9 +50,9 @@ const MediaButtonsOverlay = ({ styles, mediaButtonClick, isPlaying, isLoading, _
                     value={Math.round(_time.current)}
                     max={Math.round(_time.max)}
                     color={'red'}
-                    className="w-full"
-                    onClick={(e) =>{
-                        let percentage = ((e.clientX - e.target.getBoundingClientRect().x)/e.target.getBoundingClientRect().width);
+                    className="w-full h-[15px]"
+                    onClick={(e) => {
+                        let percentage = ((e.clientX - e.target.getBoundingClientRect().x) / e.target.getBoundingClientRect().width);
                         videoRef.current.currentTime = _time.max * percentage
                         e.target.value = _time.max * percentage
                         // setTime(prev => {
