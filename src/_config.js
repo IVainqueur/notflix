@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 export const isProd = () => process.env.NODE_ENV === "production"
 // export const BASE_URL = "http://0.0.0.0:8080"
 //export const BASE_URL = "https://iv-notflix.herokuapp.com"
-export const BASE_URL = isProd() ? "https://web-production-5248.up.railway.app" : "http://0.0.0.0:8080"
+export const BASE_URL = isProd() ? "http://157.245.121.185:8080" : "http://localhost:8080"
 
 /**
  * An instance of axios which has some default params that are going to be shared across all network requests
